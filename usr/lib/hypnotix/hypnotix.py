@@ -975,6 +975,7 @@ class MainWindow:
         self.mpv.pause = not self.mpv.pause
 
     def on_show_button(self, widget):
+        self.sidebar.hide()
         self.navigate_to("channels_page")
 
     def on_provider_button(self, widget):
