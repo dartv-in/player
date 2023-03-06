@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Generated with glade 3.22.2 -->
 <interface>
-  <requires lib="gtk+" version="3.20"/>
+  <requires lib="gtk+" version="3.22"/>
   <requires lib="xapp" version="0.0"/>
   <object class="GtkMenu" id="main_menu">
     <property name="visible">True</property>
@@ -444,14 +444,16 @@
                 <property name="border_width">12</property>
                 <property name="orientation">vertical</property>
                 <child>
-                  <object class="GtkBox">
+                  <object class="GtkPaned">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
+                    <property name="wide-handle">True</property>
                     <child>
                       <object class="GtkScrolledWindow" id="sidebar">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
-                        <property name="propagate_natural_width">True</property>
+                        <property name="propagate-natural-width">True</property>
+                        <property name="min-content-width">240</property>
                         <child>
                           <object class="GtkViewport">
                             <property name="visible">True</property>
@@ -468,11 +470,6 @@
                           </object>
                         </child>
                       </object>
-                      <packing>
-                        <property name="expand">False</property>
-                        <property name="fill">True</property>
-                        <property name="position">0</property>
-                      </packing>
                     </child>
                     <child>
                       <object class="GtkBox" id="playback_box">
